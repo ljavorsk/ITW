@@ -1,0 +1,86 @@
+    * {
+        margin-left: 20px;
+        margin-right: 20px;
+        column-gap: 40px;
+    }
+    
+    body {
+        font-family: Merriweather;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #898989;
+        min-width: 768px;
+        max-width: 1200px;
+        margin: auto;
+        width: 100%;
+    }
+    
+     :is(h1, h2, h3, h4, h5, h6, a, #submit-btn, #news-btn) {
+        font-family: Montserrat;
+    }
+    
+     :is(h1, h2, h3, h4, h5, h6, #references p) {
+        color: #4d4d4d;
+    }
+    
+     :is(#submit-btn, #news-btn) {
+        font-size: 13px;
+        letter-spacing: .15em;
+    }
+    
+    a {
+        color: steelblue;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: black;
+    }
+    
+    #navigation {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    #navigation #nav-logo a {
+        font-size: 25px;
+        color: black;
+        vertical-align: middle;
+    }
+    
+    #navigation #nav-menu a {
+        font-size: 13px;
+        letter-spacing: .05em;
+        margin-right: 20px;
+        vertical-align: middle;
+        text-transform: uppercase;
+    }
+    
+    #navigation #nav-menu ul {
+        list-style-type: none;
+    }
+    
+    #navigation #nav-menu li {
+        float: right;
+    }
+    
+    #header {
+        font-size: 32px;
+        color: white;
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+    
+    #about {
+        margin-top: 40px;
+        margin-bottom: 100px;
+        column-width: 33.3%
+    }
+    
+    #about h2 {
+        font-size: 40px;
+    }
+    
+    #about h3 {
+        font-size: 24px;
+    }
