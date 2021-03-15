@@ -1,86 +1,357 @@
-    * {
-        margin-left: 20px;
-        margin-right: 20px;
-        column-gap: 40px;
-    }
-    
-    body {
-        font-family: Merriweather;
-        font-size: 14px;
-        line-height: 1.7;
-        color: #898989;
-        min-width: 768px;
-        max-width: 1200px;
-        margin: auto;
-        width: 100%;
-    }
-    
-     :is(h1, h2, h3, h4, h5, h6, a, #submit-btn, #news-btn) {
-        font-family: Montserrat;
-    }
-    
-     :is(h1, h2, h3, h4, h5, h6, #references p) {
-        color: #4d4d4d;
-    }
-    
-     :is(#submit-btn, #news-btn) {
-        font-size: 13px;
-        letter-spacing: .15em;
-    }
-    
-    a {
-        color: steelblue;
-        text-decoration: none;
-    }
-    
-    a:hover {
-        color: black;
-    }
-    
-    #navigation {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    
-    #navigation #nav-logo a {
-        font-size: 25px;
-        color: black;
-        vertical-align: middle;
-    }
-    
-    #navigation #nav-menu a {
-        font-size: 13px;
-        letter-spacing: .05em;
-        margin-right: 20px;
-        vertical-align: middle;
-        text-transform: uppercase;
-    }
-    
-    #navigation #nav-menu ul {
-        list-style-type: none;
-    }
-    
-    #navigation #nav-menu li {
-        float: right;
-    }
-    
-    #header {
-        font-size: 32px;
-        color: white;
-        padding-left: 20px;
-        padding-bottom: 20px;
-    }
-    
-    #about {
-        margin-top: 40px;
-        margin-bottom: 100px;
-        column-width: 33.3%
-    }
-    
-    #about h2 {
-        font-size: 40px;
-    }
-    
-    #about h3 {
-        font-size: 24px;
-    }
+/*
+    Author: Lukas Javorsky (xjavor20)
+    Project: 1st ITW project
+*/
+
+* {
+    column-gap: 40px;
+}
+
+.content {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+body {
+    font-family: Merriweather;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #898989;
+    min-width: 768px;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+#submit-btn,
+#news-btn {
+    font-family: Montserrat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#references p {
+    color: #4d4d4d;
+    font-weight: normal;
+}
+
+#submit-btn,
+#news-btn {
+    font-size: 13px;
+    letter-spacing: .15em;
+}
+
+a {
+    color: steelblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+#navigation {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 40px;
+}
+
+#navigation #nav-logo a {
+    font-size: 25px;
+    color: black;
+    vertical-align: middle;
+    margin: 0;
+    font-weight: bold;
+}
+
+#navigation #nav-logo {
+    float: left;
+    padding: inherit;
+}
+
+#navigation #nav-menu a {
+    font-size: 13px;
+    letter-spacing: .05em;
+    margin-right: 20px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #bfbfbf;
+}
+
+#navigation #nav-menu ul {
+    list-style-type: none;
+    padding: 0px;
+    float: right;
+}
+
+#navigation #nav-menu li {
+    display: inline-block;
+}
+
+#header {
+    font-size: 32px;
+    color: white;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    height: 550px;
+}
+
+#header img {
+    width: 100%;
+}
+
+#header h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 32px;
+    color: white;
+    bottom: 100px;
+    left: 20px;
+    font-weight: normal;
+}
+
+#about {
+    padding-top: 40px;
+    margin-bottom: 100px;
+}
+
+#about p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+#about h3 {
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+#about .about-item p {
+    color: #bfbfbf;
+    text-align: left;
+    font-size: 14px;
+    margin-top: 0px;
+}
+
+.about-item {
+    width: 31%;
+    display: inline-block;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#about .about-item img {
+    width: 96%;
+    height: 90%;
+}
+
+#middle-sections {
+    overflow: auto;
+    margin-top: 40px;
+    padding-bottom: 100px;
+    background-color: whitesmoke;
+}
+
+#middle-sections h2 {
+    font-size: 32px;
+}
+
+#middle-sections h3 {
+    font-size: 24px;
+}
+
+#news {
+    width: 59%;
+    float: left;
+    margin-right: 2%;
+}
+
+#news .news-item {
+    border-bottom: 1px solid;
+    border-color: #e3e3e3;
+    margin-bottom: 20px;
+}
+
+#news .news-item h3 {
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+#news .news-item p {
+    margin-top: 8px;
+}
+
+#news .news-date {
+    font-size: 12px;
+    color: #bfbfbf;
+    text-transform: uppercase;
+}
+
+#news #news-btn {
+    background-color: lightsteelblue;
+    width: 150px;
+    height: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle
+}
+
+#references {
+    width: 39%;
+    display: inline-block;
+}
+
+#references blockquote {
+    margin-bottom: 40px;
+}
+
+#references img {
+    width: 120px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+blockquote {
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+blockquote p {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+blockquote span {
+    font-size: 14px;
+    color: #bfbfbf;
+    font-style: italic;
+}
+
+#steps {
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+#steps .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    height: 180px;
+}
+
+#steps i {
+    font-size: 60px;
+    color: lightsteelblue;
+    float: left;
+}
+
+#steps h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: justify;
+    padding-left: 100px;
+}
+
+#steps p {
+    padding-left: 100px;
+}
+
+.steps-more {
+    padding-left: 100px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#contact {
+    padding-top: 40px;
+    padding-bottom: 100px;
+    background-color: #262626;
+}
+
+#contact h3 {
+    font-size: 24px;
+    color: white;
+    margin-top: 0px;
+}
+
+#contact a:hover {
+    color: white;
+}
+
+#contact input {
+    height: 54px;
+    font-size: 18px;
+    margin-bottom: 4px;
+    display: block;
+    font-family: Montserrat;
+}
+
+#email-form:not(:valid) {
+    color: red;
+}
+
+#email-form {
+    width: 95%;
+}
+
+#submit-btn {
+    background-color: steelblue;
+    color: white;
+    border-radius: 4px;
+    border: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px !important;
+    padding: 12px;
+}
+
+.contact-item {
+    float: left;
+    width: 33.33%;
+}
+
+.content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.contact-item ul li {
+    font-size: 14px;
+    padding-bottom: 4px;
+}
+
+.contact-item ul {
+    list-style-type: none;
+    text-transform: uppercase;
+    padding-left: 0;
+}
+
+#footer-note {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #1a1a1a;
+    font-size: 12px;
+}
