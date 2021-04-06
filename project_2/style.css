@@ -1,0 +1,114 @@
+/*
+    Author: Lukas Javorsky (xjavor20)
+    Project: 2nd ITW project
+    File: style.css
+*/
+
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.primaryColor {
+    color: rgb(37, 117, 236);
+}
+
+.secondaryColor {
+    color: #4c5358;
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+#person {
+    width: 140px;
+    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    margin-top: 15rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    flex-basis: 88%;
+    background-color: whitesmoke;
+}
+
+main h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 5px;
+}
+
+main section {
+    min-height: 100vh;
+    border-bottom: 0.5rem solid gainsboro;
+    padding-top: 12rem;
+    padding-left: 3rem;
+}
+
+#navigation a {
+    transition: all .2s ease-in-out;
+    color: white;
+}
+
+#navigation a:hover {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#navigation {
+    /* Full-height */
+    height: 100vh;
+    /* Width */
+    flex-basis: 12%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    background-color: rgb(37, 117, 236);
+    overflow: hidden;
+}
+
+#navigation #nav-menu ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#navigation #nav-menu li {
+    font-size: 18px;
+    padding-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#about #info {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+#about #info a {
+    font-weight: bold;
+}
+
+#about #info a:hover {
+    text-decoration: underline;
+    /* Darken the text */
+    filter: brightness(0.5);
+}
