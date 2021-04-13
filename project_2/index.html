@@ -17,21 +17,22 @@
 <body>
     <div class="wrapper">
         <nav id="navigation">
-            <div>
+            <div id="nav-menu">
                 <a href="index.html#">
                     <img id="person" src="img/person.png" alt="Person's image">
                 </a>
-
-            </div>
-            <div id="nav-menu">
                 <ul>
                     <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
                     <li><a href="index.html#projects">Projects</a></li>
                     <li><a href="index.html#education">Education</a></li>
-                    <li><a href="index.html#interests">Interests</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </div>
+            <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
+                <i><img src="img/hamburger.png" alt="MENU"></i>
+            </a>
+
+
         </nav>
 
         <main>
@@ -42,44 +43,205 @@
                 <div id="info">221B Baker Street, London · +420 993 023 347 ·
                     <a href="mailto:creig@hillman.com" class="primaryColor">creig@hillman.com</a>
                 </div>
+                <div id="social">
+                    <!-- The links are set to placeholders for this project -->
+                    <a href="#"><img src="img/gh.png" alt="Github icon"></a>
+                    <a href="#"><img src="img/fb.png" alt="Facebook icon"></a>
+                    <a href="#"><img src="img/li.png" alt="LinkedIn icon"></a>
+                    <a href="#"><img src="img/ig.png" alt="Instagram icon"></a>
+                    <a href="#"><img src="img/tw.png" alt="Twitter icon"></a>
+                </div>
                 <p class="secondaryColor">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vitae adipisci iusto dolores, dolore in provident veritatis incidunt repellat tenetur, esse velit molestias quia ex excepturi possimus? Architecto, non perferendis!<br>                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quas unde, totam vel magni adipisci doloribus molestias aperiam, beatae eius maiores minus, cumque fugiat consectetur officia nobis illum repudiandae dolorem.
                 </p>
             </section>
+            <section id="experience">
+                <h2>
+                    Experience
+                </h2>
+                <div id="list">
+                    <div class="node">
+                        <div class="item-date">
+                            <h3>
+                                Associate Software Engineer
+                            </h3>
+                            <div class="primaryColor date">
+                                July 2019 - Present
+                            </div>
+                        </div>
+                        <div class="company-employment secondaryColor">
+                            Red Hat · Full-time
+                        </div>
+                        <div class="team secondaryColor">
+                            Core Services team
+                        </div>
+                    </div>
+                    <div class="node">
+                        <div class="item-date">
+                            <h3>
+                                Web Developer
+                            </h3>
+                            <div class="primaryColor date">
+                                August 2017 - May 2019
+                            </div>
+                        </div>
+                        <div class="company-employment secondaryColor">
+                            Seznam · Part-time
+                        </div>
+                        <div class="team secondaryColor">
+                            Front-end team
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section id="projects">
+                <!-- The links are set to placeholders for this project -->
                 <h2>
                     Projects
                 </h2>
-                <p class="secondaryColor">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vitae adipisci iusto dolores, dolore in provident veritatis incidunt repellat tenetur, esse velit molestias quia ex excepturi possimus? Architecto, non perferendis!
-                </p>
+                <nav id="project-navigation">
+                    <div id="projects-nav-menu">
+                        <ul>
+                            <li><a href="index.html#opensrc">Open Source</a></li>
+                            <li><a href="index.html#enterprise">Enterprise</a></li>
+                            <li><a href="index.html#school-prj">School projects</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <h3 id="opensrc">
+                    Open Source
+                </h3>
+                <div class="project-scope">
+                    <div class="project">
+                        <a href="#"><img src="img/gh.png" alt="Github icon"></a>
+                        <a href="#">
+                            <h4 class="primaryColor">
+                                MariaDB Server
+                            </h4>
+                        </a>
+                        <div class="type secondaryColor">
+                            Contribution
+                        </div>
+                    </div>
+                    <div class="project">
+                        <a href="#"><img src="img/gh.png" alt="Github icon"></a>
+                        <a href="#">
+                            <h4 class="primaryColor">
+                                MySQL Server
+                            </h4>
+                        </a>
+                        <div class="type secondaryColor">
+                            Contribution
+                        </div>
+                    </div>
+                </div>
+                <h3 id="enterprise">
+                    Enterprise
+                </h3>
+                <div class="project-scope">
+                    <div class="project">
+                        <a href="#"><img src="img/gl.png" alt="GitLab icon"></a>
+                        <a href="#">
+                            <h4 class="primaryColor">
+                                Microsoft Windows
+                            </h4>
+                        </a>
+                        <div class="type secondaryColor">
+                            Contribution
+                        </div>
+                    </div>
+                </div>
+                <h3 id="school-prj">
+                    School projects
+                </h3>
+                <div>
+                    <div class="project">
+                        <a href="#"><img src="img/gh.png" alt="Github icon"></a>
+                        <a href="#">
+                            <h4 class="primaryColor">
+                                Web design
+                            </h4>
+                        </a>
+
+                        <div class="type secondaryColor">
+                            Owner
+                        </div>
+                    </div>
+                    <div class="project">
+                        <a href="#"><img src="img/gl.png" alt="GitLab icon"></a>
+                        <a href="#">
+                            <h4 class="primaryColor"> Apple application (Student Rating)</h4>
+                        </a>
+
+                        <div class="type secondaryColor">
+                            Owner
+                        </div>
+                    </div>
+                </div>
             </section>
             <section id="education">
                 <h2>
                     Education
                 </h2>
-                <p class="secondaryColor">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vitae adipisci iusto dolores, dolore in provident veritatis incidunt repellat tenetur, esse velit molestias quia ex excepturi possimus? Architecto, non perferendis!
-                </p>
+                <div id="list">
+                    <div class="node">
+                        <div class="item-date">
+                            <h3>
+                                Brno University of Technology
+                            </h3>
+                            <div class="primaryColor date">
+                                August 2016 - May 2019
+                            </div>
+                        </div>
+                        <div class="faculty secondaryColor">
+                            Faculty of Informatics
+                        </div>
+                        <div class="spec secondaryColor">
+                            Bachelor - Computer Science
+                        </div>
+                        <div class="secondaryColor">
+                            GPA: 2.43
+                        </div>
+                    </div>
+                    <div class="node">
+                        <div class="item-date">
+                            <h3>
+                                Prague University of Technology
+                            </h3>
+                            <div class="primaryColor date">
+                                August 2019 - May 2021
+                            </div>
+                        </div>
+                        <div class="faculty secondaryColor">
+                            Faculty of Electronics
+                        </div>
+                        <div class="spec secondaryColor">
+                            Masters - Computer Science
+                        </div>
+                        <div class="secondaryColor">
+                            GPA: 3.1
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section id="interests">
-                <h2>
-                    Interests
-                </h2>
-                <p class="secondaryColor">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vitae adipisci iusto dolores, dolore in provident veritatis incidunt repellat tenetur, esse velit molestias quia ex excepturi possimus? Architecto, non perferendis!
-                </p>
-            </section>
-            <section id="contact">
-                <h2>
-                    Contact
-                </h2>
-                <p class="secondaryColor">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vitae adipisci iusto dolores, dolore in provident veritatis incidunt repellat tenetur, esse velit molestias quia ex excepturi possimus? Architecto, non perferendis!
-                </p>
-            </section>
+
         </main>
+
+        <!-- This defines the background image on the right side of the page -->
+        <div id="bg"> </div>
     </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("nav-menu");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
 </body>
 
 </html>

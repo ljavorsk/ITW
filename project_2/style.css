@@ -1,7 +1,7 @@
 /*
-    Author: Lukas Javorsky (xjavor20)
-    Project: 2nd ITW project
-    File: style.css
+Author: Lukas Javorsky (xjavor20)
+Project: 2nd ITW project
+File: style.css
 */
 
 * {
@@ -29,6 +29,7 @@ a {
 }
 
 #person {
+    transition: all .2s ease-in-out;
     width: 140px;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
@@ -39,13 +40,23 @@ a {
     margin-bottom: 40px;
 }
 
+#person:hover {
+    width: 150px;
+}
+
 .wrapper {
     display: flex;
     justify-content: space-between;
 }
 
+#bg {
+    min-height: max-content;
+    flex-basis: 12%;
+    background-image: url(./img/bg.png);
+}
+
 main {
-    flex-basis: 88%;
+    flex-basis: 76%;
     background-color: whitesmoke;
 }
 
@@ -56,11 +67,15 @@ main h1 {
     margin-bottom: 5px;
 }
 
+main h2 {
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 main section {
     min-height: 100vh;
     border-bottom: 0.5rem solid gainsboro;
-    padding-top: 12rem;
-    padding-left: 3rem;
+    padding: 12rem 3rem 5rem 3rem;
 }
 
 #navigation a {
@@ -78,6 +93,7 @@ main section {
     height: 100vh;
     /* Width */
     flex-basis: 12%;
+    min-width: 200px;
     position: sticky;
     top: 0;
     left: 0;
@@ -86,7 +102,11 @@ main section {
     overflow: hidden;
 }
 
-#navigation #nav-menu ul {
+.hamburger {
+    display: none;
+}
+
+nav div ul {
     list-style-type: none;
     padding: 0px;
 }
@@ -99,7 +119,7 @@ main section {
 }
 
 #about #info {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-size: 18px;
 }
 
@@ -111,4 +131,238 @@ main section {
     text-decoration: underline;
     /* Darken the text */
     filter: brightness(0.5);
+}
+
+#social {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+#social img {
+    width: 40px;
+    margin-right: 20px;
+}
+
+#list {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+#list .node {
+    margin-bottom: 5rem;
+}
+
+#list h3 {
+    margin-top: 0;
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.faculty,
+.date,
+.company-employment,
+.team,
+h4 {
+    font-size: 18px;
+}
+
+.node .faculty {
+    font-style: italic;
+}
+
+.node .spec {
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.item-date {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.date {
+    font-weight: bold;
+    margin-right: 5rem;
+}
+
+.node .company-employment {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.node .team {
+    font-weight: bold;
+}
+
+.project img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.project {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.project h4,
+.project .type {
+    margin: 10px 40px 40px 10px;
+}
+
+#projects h3 {
+    font-size: 24px;
+}
+
+#projects .project-scope {
+    border-bottom: 2px solid lightgrey;
+    margin-bottom: 100px;
+}
+
+#projects-nav-menu a {
+    color: white;
+}
+
+nav #projects-nav-menu li {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-right: 2%;
+    background: rgb(37, 117, 236);
+    min-width: 12%;
+    border: 1px solid black;
+    box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 5%;
+    transition: .2s all;
+}
+
+nav #projects-nav-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 100px;
+}
+
+
+/* Blurs the navigation menu when cursor hovers it */
+
+nav #projects-nav-menu ul:hover li {
+    filter: blur(3px);
+    opacity: .5;
+    transform: scale(.98);
+    box-shadow: none;
+}
+
+
+/* Unblurs the selected navigation when cursor hovers it */
+
+nav #projects-nav-menu ul:hover li:hover {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+    box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+}
+
+@media (max-width: 768px) {
+    /* Edit fonts */
+    p {
+        font-size: 12px;
+    }
+    main h1 {
+        font-size: 3rem;
+    }
+    main h2 {
+        font-size: 2rem;
+    }
+    #about #info {
+        font-size: 14px;
+    }
+    #list h3 {
+        font-size: 16px;
+    }
+    .faculty,
+    .date,
+    .company-employment,
+    .team,
+    h4,
+    #projects div,
+    .node div {
+        font-size: 14px;
+    }
+    #projects h3 {
+        font-size: 20px;
+    }
+    /* Edit margins and paddings */
+    main section {
+        min-height: 50vh;
+        padding: 8rem 1rem 2rem 1rem;
+    }
+    #social img {
+        width: 26px;
+        margin-right: 10px;
+    }
+    .date {
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+    .project img {
+        display: none;
+    }
+    .project h4,
+    .project .type {
+        margin: 10px 10px 20px 10px;
+    }
+    nav #projects-nav-menu ul {
+        margin-bottom: 50px;
+    }
+    .wrapper {
+        display: inline-block;
+    }
+    /* Navigation menu */
+    /* Style the navigation menu */
+    #navigation {
+        height: 39px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+    }
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    #navigation #nav-menu {
+        display: none;
+    }
+    /* Style navigation menu links */
+    #navigation a {
+        color: white;
+        padding: 5px 10px;
+        text-decoration: none;
+        font-size: 16px;
+        display: block;
+    }
+    /* Style the hamburger menu */
+    #navigation a.hamburger {
+        background: white;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .hamburger img {
+        width: 40px;
+    }
+    /* Add a grey background color on mouse-over */
+    #navigation a:hover {
+        background-color: #ddd;
+        color: black;
+    }
 }
