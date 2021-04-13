@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-image: url('data/bg.jpg');
+    font-size: 1rem;
 }
 
 table {
@@ -15,12 +15,21 @@ td {
 
 th {
     border: 2px dotted black;
-    background-color: #b15e23;
+    background-color: #d5a17c;
 }
 
 #head {
-    height: 170px;
-    position: relative;
+    background-color: #3c1f0a;
+    padding-bottom: 20px;
+}
+
+#navbar {
+    background-color: #b15e23;
+}
+
+#heading h1 {
+    margin: 0;
+    font-size: 4rem;
 }
 
 #heading {
@@ -41,41 +50,27 @@ th {
 }
 
 #pred-cvic {
-    padding-top: 10px;
-    padding-bottom: 10px;
     background-color: white;
 }
 
-nav {
-    position: absolute;
-    top: 90px;
-    height: 10px;
-}
-
 nav ul {
-    overflow: hidden;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     list-style-type: none;
 }
 
 nav li {
-    padding-right: 20px;
-    margin-top: 50px;
-    float: left;
+    padding: 20px;
+    display: inline-block;
+}
+
+nav li:hover {
+    background-color: #3c1f0a;
 }
 
 nav li a {
-    font-size: small;
+    font-size: medium;
     color: white;
-}
-
-nav li:hover :after {
-    color: #b15e23;
-    content: url('data/menu_bullet.gif');
-    margin-top: 3px;
-    display: block;
-    text-align: center;
 }
 
 h1 a {
@@ -92,10 +87,9 @@ h2 {
 }
 
 .text-area {
-    width: 960px;
     height: inherit;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #kont-souv {
@@ -104,8 +98,22 @@ h2 {
     padding-bottom: 20px;
 }
 
+#kont-souv .text-area {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.kont-souv-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+
 #kont-souv h2 {
+    font-size: 2rem;
     color: white;
+    margin-bottom: 10px;
 }
 
 dl {
@@ -119,7 +127,6 @@ dt {
 
 dd {
     text-align: right;
-    padding-right: 70%;
     grid-column-start: 2;
 }
 
@@ -154,14 +161,14 @@ a {
     float: left;
 }
 
-#pred-cvic .text-area #prednasky div {
+.predn-item a {
     margin-bottom: 10px;
     border-bottom: 1px dotted;
     border-color: #b15e23;
 }
 
-#pred-cvic .text-area #cvicenia div {
-    margin-bottom: 10px;
+.cvic-item {
+    margin-bottom: 30px;
     border-bottom: 1px dotted;
     border-color: #b15e23;
 }
@@ -181,10 +188,19 @@ a {
     height: 50px;
 }
 
-#pred-cvic {
-    margin-top: 2px;
-    height: 700px;
-    background: linear-gradient(to right, white 53%, rgb(201, 201, 201) 47%);
+#prednasky {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#right {
+    flex: 1;
+}
+
+#left {
+    margin-right: 20px;
+    flex: 1;
 }
 
 #prednasky p {
@@ -192,27 +208,76 @@ a {
     height: auto;
 }
 
-#prednasky div {
-    width: 45%;
-    height: 180px;
-    display: inline-block;
-    margin-right: 20px;
+#pred-cvic .text-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #levy {
-    width: 58%;
-    margin: 0;
-    float: left;
+    flex: 8;
+    background-color: white;
+    padding-right: 50px;
+    margin-bottom: 50px;
 }
 
 #pravy {
-    padding-left: 20px;
-    width: 38%;
-    margin: 0;
-    float: left;
-    height: inherit;
+    padding-left: 50px;
+    flex: 4;
+    background: linear-gradient(to left, white, rgb(197, 197, 197));
 }
 
-#pravy div {
-    height: 130px;
+@media (min-width: 1201px) {
+    .text-area {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1199px) {
+    .text-area {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    #levy {
+        flex: 7;
+    }
+    #pravy {
+        flex: 5;
+    }
+    #prednasky {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    #pred-cvic .text-area {
+        flex-direction: column;
+    }
+    #pred-cvic {
+        background: linear-gradient(to bottom, white 63%, rgb(201, 201, 201) 47%);
+    }
+    #pravy {
+        padding-left: 0;
+        padding-right: 50px;
+        background: none;
+    }
+    #kont-souv .text-area {
+        flex-direction: column;
+    }
+    dd {
+        margin-right: 55%;
+    }
+}
+
+@media (max-width: 575px) {
+    dd {
+        margin-right: 30%;
+    }
 }
