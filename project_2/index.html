@@ -16,25 +16,24 @@
 
 <body>
     <div class="wrapper">
-        <nav id="navigation">
-            <div id="nav-menu">
-                <a href="index.html#">
-                    <img id="person" src="img/person.png" alt="Person's image">
-                </a>
-                <ul>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#experience">Experience</a></li>
-                    <li><a href="index.html#projects">Projects</a></li>
-                    <li><a href="index.html#education">Education</a></li>
-                </ul>
-            </div>
-            <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
-                <i><img src="img/hamburger.png" alt="MENU"></i>
+        <nav class="navigation">
+            <a href="index.html#">
+                <img id="person" src="img/person.png" alt="Person's image">
             </a>
-
-
+            <ul class="nav-menu">
+                <li><a href="index.html#about" class="nav-item">About</a></li>
+                <li><a href="index.html#experience" class="nav-item">Experience</a></li>
+                <li><a href="index.html#projects" class="nav-item">Projects</a></li>
+                <li><a href="index.html#education" class="nav-item">Education</a></li>
+            </ul>
+            <div class="name">Creig Hillman</div>
+            <div class="hamburger">
+                <!-- Spans creates the hamburger image -->
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
-
         <main>
             <section id="about">
                 <h1>
@@ -231,17 +230,7 @@
         <!-- This defines the background image on the right side of the page -->
         <div id="bg"> </div>
     </div>
-
-    <script>
-        function myFunction() {
-            var x = document.getElementById("nav-menu");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
-        }
-    </script>
 </body>
+<script src="my.js"></script>
 
 </html>

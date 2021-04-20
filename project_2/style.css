@@ -78,17 +78,17 @@ main section {
     padding: 12rem 3rem 5rem 3rem;
 }
 
-#navigation a {
+.navigation a {
     transition: all .2s ease-in-out;
     color: white;
 }
 
-#navigation a:hover {
+.navigation a:hover {
     font-size: 22px;
     font-weight: bold;
 }
 
-#navigation {
+.navigation {
     /* Full-height */
     height: 100vh;
     /* Width */
@@ -102,20 +102,37 @@ main section {
     overflow: hidden;
 }
 
-.hamburger {
-    display: none;
-}
-
-nav div ul {
+nav ul {
     list-style-type: none;
     padding: 0px;
 }
 
-#navigation #nav-menu li {
+.navigation li {
     font-size: 18px;
     padding-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
+}
+
+
+/* Hide the hamburger and the name when it's not a small screen */
+
+.hamburger {
+    display: none;
+}
+
+.name {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
 }
 
 #about #info {
@@ -309,9 +326,6 @@ nav #projects-nav-menu ul:hover li:hover {
         margin-right: 10px;
         margin-left: 20px;
     }
-    .project img {
-        display: none;
-    }
     .project h4,
     .project .type {
         margin: 10px 10px 20px 10px;
@@ -319,50 +333,59 @@ nav #projects-nav-menu ul:hover li:hover {
     nav #projects-nav-menu ul {
         margin-bottom: 50px;
     }
+    /* Hides the github/gitlab icons for small devices */
+    .project img {
+        display: none;
+    }
     .wrapper {
         display: inline-block;
     }
-    /* Navigation menu */
-    /* Style the navigation menu */
-    #navigation {
-        height: 39px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 10;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0.5rem 1rem;
+    /* Transforms the navigation into hamburger menu with the authors name 
+    on the left side of the navigation bar */
+    .navigation {
+        height: 50px;
     }
-    /* Hide the links inside the navigation menu (except for logo/home) */
-    #navigation #nav-menu {
+    #person {
         display: none;
     }
-    /* Style navigation menu links */
-    #navigation a {
-        color: white;
-        padding: 5px 10px;
-        text-decoration: none;
-        font-size: 16px;
-        display: block;
-    }
-    /* Style the hamburger menu */
-    #navigation a.hamburger {
-        background: white;
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .hamburger img {
-        width: 40px;
-    }
-    /* Add a grey background color on mouse-over */
-    #navigation a:hover {
-        background-color: #ddd;
+    .navigation a {
         color: black;
+    }
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 2.1rem;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        border-radius: 10px;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .nav-menu.active {
+        right: 0;
+    }
+    .nav-menu.active li a {
+        color: rgb(37, 117, 236);
+    }
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+    .hamburger {
+        display: block;
+        float: right;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+    .name {
+        display: block;
+        float: left;
+        margin: 15px 0 0 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .navigation ul {
+        padding-top: 20px;
     }
 }
