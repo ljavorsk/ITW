@@ -1,3 +1,9 @@
+/*
+Author: Lukas Javorsky (xjavor20)
+Project: 2nd ITW project
+File: my.js
+*/
+
 const hamburger = document.querySelector(".hamburger");
 const navigationMenu = document.querySelector(".nav-menu");
 const navigationItem = document.querySelectorAll(".nav-item");
