@@ -44,6 +44,10 @@ a {
     width: 150px;
 }
 
+#person-small {
+    display: none;
+}
+
 .wrapper {
     display: flex;
     justify-content: space-between;
@@ -57,7 +61,7 @@ a {
 
 main {
     flex-basis: 76%;
-    background-color: whitesmoke;
+    background-color: aliceblue;
 }
 
 main h1 {
@@ -291,6 +295,7 @@ nav #projects-nav-menu ul:hover li:hover {
     }
     main h1 {
         font-size: 3rem;
+        margin-top: 1rem;
     }
     main h2 {
         font-size: 2rem;
@@ -316,7 +321,7 @@ nav #projects-nav-menu ul:hover li:hover {
     /* Edit margins and paddings */
     main section {
         min-height: 50vh;
-        padding: 8rem 1rem 2rem 1rem;
+        padding: 2rem 1rem 2rem 1rem;
     }
     #social img {
         width: 26px;
@@ -347,6 +352,14 @@ nav #projects-nav-menu ul:hover li:hover {
     }
     #person {
         display: none;
+    }
+    #person-small {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 150px;
+        border: 0.5rem solid rgba(255, 255, 255, 0.2);
+        border-radius: 30%;
     }
     .navigation a {
         color: black;
@@ -387,5 +400,9 @@ nav #projects-nav-menu ul:hover li:hover {
     }
     .navigation ul {
         padding-top: 20px;
+    }
+    nav #projects-nav-menu ul:hover li {
+        filter: none;
+        opacity: 1;
     }
 }
