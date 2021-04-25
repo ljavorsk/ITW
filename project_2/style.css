@@ -55,12 +55,12 @@ a {
 
 #bg {
     min-height: max-content;
-    flex-basis: 12%;
+    flex-basis: 15%;
     background-image: url(./img/bg.png);
 }
 
 main {
-    flex-basis: 76%;
+    flex-basis: 70%;
     background-color: aliceblue;
 }
 
@@ -82,6 +82,10 @@ main section {
     padding: 12rem 3rem 5rem 3rem;
 }
 
+#education {
+    border-bottom: none;
+}
+
 .navigation a {
     transition: all .2s ease-in-out;
     color: white;
@@ -96,7 +100,7 @@ main section {
     /* Full-height */
     height: 100vh;
     /* Width */
-    flex-basis: 12%;
+    flex-basis: 15%;
     min-width: 200px;
     position: sticky;
     top: 0;
@@ -154,6 +158,10 @@ nav ul {
     filter: brightness(0.5);
 }
 
+.project h4:hover {
+    filter: brightness(0.5);
+}
+
 #social {
     display: flex;
     justify-content: flex-start;
@@ -166,17 +174,17 @@ nav ul {
     margin-right: 20px;
 }
 
-#list {
+.list {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
 }
 
-#list .node {
+.list .node {
     margin-bottom: 5rem;
 }
 
-#list h3 {
+.list h3 {
     margin-top: 0;
     font-size: 24px;
     margin-bottom: 4px;
@@ -288,7 +296,29 @@ nav #projects-nav-menu ul:hover li:hover {
     box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
 }
 
+footer {
+    background-color: rgb(37, 117, 236);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
+    /* Edit aligning */
+    main h1,
+    h2,
+    p,
+    #info {
+        text-align: center;
+    }
+    #social {
+        justify-content: space-around;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    nav #projects-nav-menu ul {
+        justify-content: space-around;
+    }
     /* Edit fonts */
     p {
         font-size: 12px;
@@ -303,7 +333,7 @@ nav #projects-nav-menu ul:hover li:hover {
     #about #info {
         font-size: 14px;
     }
-    #list h3 {
+    .list h3 {
         font-size: 16px;
     }
     .faculty,
@@ -317,6 +347,12 @@ nav #projects-nav-menu ul:hover li:hover {
     }
     #projects h3 {
         font-size: 20px;
+    }
+    /* Edit footer */
+    footer {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 13px;
     }
     /* Edit margins and paddings */
     main section {
