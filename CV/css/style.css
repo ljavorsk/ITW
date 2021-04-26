@@ -93,7 +93,7 @@ h2 {
 }
 
 #kont-souv {
-    background-image: url('data/footer_bg.gif');
+    background-image: url('../data/footer_bg.gif');
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -143,7 +143,7 @@ dd {
 }
 
 #kont-souv ul {
-    list-style: url('data/footer_list_bullet.gif');
+    list-style: url('../data/footer_list_bullet.gif');
 }
 
 a {
@@ -227,6 +227,15 @@ a {
     background: linear-gradient(to left, white, rgb(197, 197, 197));
 }
 
+i {
+    margin-right: 3px;
+    color: white;
+}
+
+#hamburger {
+    display: none;
+}
+
 @media (min-width: 1201px) {
     .text-area {
         max-width: 1200px;
@@ -254,6 +263,12 @@ a {
         justify-content: flex-start;
         flex-direction: column;
     }
+    ul li:not(:first-child) a {
+        display: none;
+    }
+    ul li {
+        padding: 20px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -274,10 +289,58 @@ a {
     dd {
         margin-right: 55%;
     }
+    ul li {
+        padding: 10px;
+    }
 }
 
 @media (max-width: 575px) {
     dd {
         margin-right: 30%;
+    }
+    ul li:not(:first-child) {
+        display: none;
+    }
+    ul li:last-child {
+        display: inline-block;
+    }
+    #hamburger {
+        display: inline-block;
+    }
+    /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+    .sticky+.content {
+        padding-top: 60px;
+    }
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+    }
+    .topnav #myLinks {
+        display: none;
+    }
+    .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+    .topnav a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
     }
 }

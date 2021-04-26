@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>ITW - tvorba webových stránek</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -21,15 +23,23 @@
     </div>
     <div id="navbar">
         <div class="text-area">
-            <nav>
+            <nav id="navigation" class="topnav">
                 <ul>
-                    <li><a href="#">Index</a></li>
-                    <li><a href="#1">O předmětu</a></li>
-                    <li><a href="#2">Přednášky</a></li>
-                    <li><a href="#3">Výsledky</a></li>
-                    <li><a href="#4">Cvičení</a></li>
-                    <li><a href="#5">Kontakt</a></li>
-                    <li><a href="#6">Související</a></li>
+
+                    <li><a href="#"><i class="fa fa-home"></i>Index</a></li>
+                    <div id="myLinks">
+                        <li><a href="#1"><i class="fa fa-info-circle"></i>O předmětu</a></li>
+                        <li><a href="#2"><i class="fa fa-tv"></i>Přednášky</a></li>
+                        <li><a href="#3"><i class="fa fa-smile-o"></i>Výsledky</a></li>
+                        <li><a href="#4"><i class="fa fa-book"></i>Cvičení</a></li>
+                        <li><a href="#5"><i class="fa fa-envelope"></i>Kontakt</a></li>
+                        <li><a href="#6"><i class="fa fa-code-fork"></i>Související</a></li>
+                    </div>
+                    <li>
+                        <a href="javascript:void(0);" class="icon" id="hamburger" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -56,6 +66,7 @@
                 <h2 id="2">
                     Přednášky
                 </h2>
+
                 <section id="prednasky">
                     <div id="left">
                         <div class="predn-item">
@@ -191,7 +202,16 @@
             </div>
         </div>
     </div>
-
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
 </body>
 
 </html>
